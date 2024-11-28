@@ -1,0 +1,30 @@
+#container {
+  display: grid;
+  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "header header header header header header header header header header header header" "about about about about about about about about about about about about";
+}
+
+nav {
+  grid-area: nav;
+  background-color: rgb(164, 52, 216);
+  padding: 1px;
+  text-align: center;
+  position: sticky;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 1.5em;
+}
+
+nav li a {
+  color: black;
+}
+
+nav .active {
+  padding: 10px;
+}
+
+header {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
