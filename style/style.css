@@ -1,14 +1,19 @@
 #container {
   display: grid;
-  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "header header header header header header header header header header header header" "about about about about about about about about about about about about";
+  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "header header header header header header header header header header header header" "blocks blocks blocks blocks blocks blocks about about about about about about" "footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
+  background-color: rgb(245, 245, 220);
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 nav {
   grid-area: nav;
-  background-color: rgb(164, 52, 216);
+  background-color: rgb(156, 175, 136);
   padding: 1px;
   text-align: center;
   position: sticky;
+  top: 0; /* Sticks the navbar to the top of the page */
+  z-index: 1000; /* Makes sure the navbar stays above other content */
 }
 
 nav li {
@@ -26,5 +31,65 @@ nav .active {
 }
 
 header {
+  grid-area: header;
   text-align: center;
+  color: rgb(54, 69, 79);
+  font-size: 40px;
+  padding: 0px;
+  margin: 0; /* Removed negative margin */
+}
+
+.about {
+  grid-area: about;
+  padding: 0px 200px 0px 0px; /* Unused, consider removing */
+}
+.about h2 {
+  font-size: 30px;
+}
+.about p {
+  font-size: 15px;
+  line-height: 25px;
+}
+.about .site {
+  background-color: rgba(128, 128, 0, 0.5);
+  padding: 20px;
+}
+.about .Maria {
+  background-color: rgba(226, 114, 91, 0.5);
+  padding: 20px;
+  margin: 4px;
+}
+.about .Guiding {
+  background-color: rgba(194, 178, 128, 0.5);
+  padding: 20px;
+}
+.about .Planes {
+  background-color: rgba(34, 139, 34, 0.5);
+  padding: 20px;
+  margin: 4px;
+}
+.about .thankyou {
+  background-color: rgb(255, 253, 208);
+  padding: 20px;
+}
+
+.blocks {
+  grid-area: blocks;
+  display: flex; /* Centers the image */
+  justify-content: center;
+  align-items: center;
+}
+
+.blocks img {
+  width: 400px;
+  height: auto;
+  margin: 10px;
+  padding: 0px 15px;
+  box-sizing: border-box; /* Ensure padding is included in total width/height */
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(156, 175, 136);
+  position: relative; /* Changed to avoid sticky footer overflow issues */
 }/*# sourceMappingURL=style.css.map */
