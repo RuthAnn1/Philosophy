@@ -1,8 +1,9 @@
+/* Fixed missing alpha value */
 #container {
   display: grid;
-  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "header header header header header header header header header header header header" "blocks blocks blocks blocks blocks blocks about about about about about about" "footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: "nav nav nav nav nav nav nav nav nav nav nav nav" "shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes" "header header header header header header header header header header header header" "blocks blocks blocks blocks blocks blocks about about about about about about" "Scientist Scientist Scientist Scientist Reformer Reformer Reformer Reformer Peacemaker Peacemaker Peacemaker Peacemaker" "Visionary Visionary Visionary Visionary Visionary Visionary Feminist Feminist Feminist Feminist Feminist Feminist" "cite cite cite cite cite cite cite cite cite cite cite cite" "footer footer footer footer footer footer footer footer footer footer footer footer";
   grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
-  background-color: rgb(245, 245, 220);
+  background-color: rgb(242, 242, 207);
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
@@ -34,9 +35,10 @@ header {
   grid-area: header;
   text-align: center;
   color: rgb(54, 69, 79);
-  font-size: 40px;
-  padding: 0px;
-  margin: 0; /* Removed negative margin */
+  font-size: 55px;
+  padding: 0;
+  margin: 0;
+  font-family: "Tangerine", cursive;
 }
 
 .about {
@@ -44,11 +46,15 @@ header {
   padding: 0px 200px 0px 0px; /* Unused, consider removing */
 }
 .about h2 {
-  font-size: 30px;
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
 }
 .about p {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 25px;
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  font-weight: 700;
 }
 .about .site {
   background-color: rgba(128, 128, 0, 0.5);
@@ -72,12 +78,21 @@ header {
   background-color: rgb(255, 253, 208);
   padding: 20px;
 }
+.about ul {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  font-weight: 700;
+  font-size: 15px;
+}
 
 .blocks {
   grid-area: blocks;
-  display: flex; /* Centers the image */
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns the content to the top */
+  flex-direction: column; /* Stacks items vertically */
+  height: 100vh; /* Full viewport height */
+  margin-top: 0;
+  padding: 0;
 }
 
 .blocks img {
@@ -85,11 +100,144 @@ header {
   height: auto;
   margin: 10px;
   padding: 0px 15px;
-  box-sizing: border-box; /* Ensure padding is included in total width/height */
+  box-sizing: border-box;
+}
+
+.shapes {
+  grid-area: shapes;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 300px; /* Adjust height for a banner-like size */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Ensures no part of the image overflows */
+}
+.shapes header {
+  position: absolute; /* Positions header over the image */
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers header */
+  color: white;
+  font-family: "Tangerine", cursive;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.shapes img {
+  width: 100%; /* Makes the image span the full width */
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover; /* Ensures image covers container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Scientist {
+  grid-area: Scientist;
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin-left: 10px;
+}
+.Scientist h2 {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(194, 178, 128);
+  padding: 10px;
+}
+.Scientist p {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 3px 15px;
+  font-size: 20px;
+}
+
+.Reformer {
+  grid-area: Reformer;
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 0px 10px;
+}
+.Reformer h2 {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(226, 114, 91);
+  padding: 10px;
+}
+.Reformer p {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 3px 15px;
+  font-size: 20px;
+}
+
+.Peacemaker {
+  grid-area: Peacemaker;
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin-right: 10px;
+}
+.Peacemaker h2 {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(194, 178, 128);
+  padding: 10px;
+}
+.Peacemaker p {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 3px 15px;
+  font-size: 20px;
+}
+
+.Visionary {
+  grid-area: Visionary;
+  margin: 0px 10px;
+}
+.Visionary h2 {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(226, 114, 91);
+  padding: 10px;
+}
+.Visionary p {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 3px 15px;
+  font-size: 20px;
+}
+
+.Feminist {
+  grid-area: Feminist;
+  margin-right: 10px;
+}
+.Feminist h2 {
+  font-size: 40px;
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  background-color: rgb(194, 178, 128);
+  text-align: center;
+  padding: 10px;
+}
+.Feminist p {
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  margin: 5px 15px;
+  font-size: 20px;
+}
+
+.cite {
+  grid-area: cite;
+}
+.cite p {
+  font-size: 10px;
 }
 
 footer {
   grid-area: footer;
   background-color: rgb(156, 175, 136);
-  position: relative; /* Changed to avoid sticky footer overflow issues */
+  position: relative; /* Avoid sticky footer overflow issues */
 }/*# sourceMappingURL=style.css.map */
