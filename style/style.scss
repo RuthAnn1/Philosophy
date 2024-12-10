@@ -1,20 +1,29 @@
 $Sagegreen: rgb(156, 175, 136);
-$Beige: rgb(245, 245, 220);
+$Beige: rgb(242, 242, 207);
 $Charchole: rgb(54, 69, 79);
 $forestgreen: rgba(34,139,34,.5);
 $terracotta: rgba(226,114,91,.5);
-$cream: rgba(255,253,208,);
-$sand:rgba(194,178,128,.5);
+$terracottapure: rgba(226,114,91);
+$cream: rgba(255,253,208,1); /* Fixed missing alpha value */
+$sand: rgba(194,178,128,.5);
+$sandpure: rgba(194,178,128);
 $olivegreen: rgba(128,128,0,.5);
+$font-cormorant: 'Cormorant SC', Georgia, 'Times New Roman', serif;
+$font-josefin: 'Josefin Slab', 'Playfair Display', 'Merriweather', serif; 
+$font-tangerine: 'Tangerine', cursive;
 
 #container {
   display: grid;
   grid-template-areas: 
-      "nav nav nav nav nav nav nav nav nav nav nav nav"
-      "header header header header header header header header header header header header"
-      "blocks blocks blocks blocks blocks blocks about about about about about about"
-      'footer footer footer footer footer footer footer footer footer footer footer footer';
-      
+    "nav nav nav nav nav nav nav nav nav nav nav nav"
+    "shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes"
+    "header header header header header header header header header header header header"
+    "blocks blocks blocks blocks blocks blocks about about about about about about"
+    "Scientist Scientist Scientist Scientist Reformer Reformer Reformer Reformer Peacemaker Peacemaker Peacemaker Peacemaker"
+    "Visionary Visionary Visionary Visionary Visionary Visionary Feminist Feminist Feminist Feminist Feminist Feminist"
+    "cite cite cite cite cite cite cite cite cite cite cite cite"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
   grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
   background-color: $Beige;
   overflow-x: hidden; /* Prevent horizontal scroll */
@@ -29,7 +38,6 @@ nav {
   top: 0; /* Sticks the navbar to the top of the page */
   z-index: 1000; /* Makes sure the navbar stays above other content */
 }
-
 
 nav li {
   display: inline;
@@ -49,50 +57,73 @@ header {
   grid-area: header;
   text-align: center;
   color: $Charchole;
-  font-size: 40px;
-  padding: 0px;
-  margin: 0; /* Removed negative margin */
+  font-size: 55px;
+  padding: 0;
+  margin: 0;
+  font-family: $font-tangerine;
 }
 
 .about {
   grid-area: about;
+
   h2 {
-    font-size: 30px;
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
   }
+
   p {
-    font-size: 15px;
+    font-size: 20px;
     line-height: 25px;
+    font-family: $font-josefin;
+    font-weight: 700;
   }
-  .site{
+
+  .site {
     background-color: $olivegreen;
     padding: 20px;
   }
-  .Maria{
+
+  .Maria {
     background-color: $terracotta;
     padding: 20px;
     margin: 4px;
   }
-  .Guiding{
+
+  .Guiding {
     background-color: $sand;
     padding: 20px;
   }
-  .Planes{
+
+  .Planes {
     background-color: $forestgreen;
     padding: 20px;
     margin: 4px;
   }
-  .thankyou{
+
+  .thankyou {
     background-color: $cream;
     padding: 20px;
   }
+
+  ul {
+    font-family: $font-josefin;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
   padding: 0px 200px 0px 0px; /* Unused, consider removing */
 }
 
 .blocks {
   grid-area: blocks;
-  display: flex; /* Centers the image */
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns the content to the top */
+  flex-direction: column; /* Stacks items vertically */
+  height: 100vh; /* Full viewport height */
+  margin-top: 0;
+  padding: 0;
 }
 
 .blocks img {
@@ -100,11 +131,149 @@ header {
   height: auto;
   margin: 10px;
   padding: 0px 15px;
-  box-sizing: border-box; /* Ensure padding is included in total width/height */
+  box-sizing: border-box;
+}
+
+.shapes {
+  grid-area: shapes;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 300px; /* Adjust height for a banner-like size */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  //background-color: #f5f5f5; /* Optional background color */
+  overflow: hidden; /* Ensures no part of the image overflows */
+  
+  header {
+    position: absolute; /* Positions header over the image */
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers header */
+    color: white;
+    font-family: $font-tangerine;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+.shapes img {
+  width: 100%; /* Makes the image span the full width */
+  height: auto;
+  object-fit: cover; /* Ensures image covers container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Scientist {
+  grid-area: Scientist;
+  font-family: $font-josefin;
+  margin-left: 10px;
+
+  
+  h2 {
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
+    text-align: center;
+    background-color: $sandpure;
+    padding: 10px;
+  }
+  p{
+    font-family: $font-josefin;
+    margin: 3px 15px;
+    font-size: 20px;
+  }
+
+}
+
+.Reformer {
+  grid-area: Reformer;
+  font-family: $font-josefin;
+  margin: 0px 10px;
+
+  h2 {
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
+    text-align: center;
+    background-color: $terracottapure;
+    padding: 10px;
+  }
+  p{
+    font-family: $font-josefin;
+    margin: 3px 15px;
+    font-size: 20px;
+  }
+}
+
+.Peacemaker {
+  grid-area: Peacemaker;
+  font-family: $font-josefin;
+  margin-right: 10px;
+  h2 {
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
+    text-align: center;
+    background-color: $sandpure;
+    padding: 10px;
+  }
+  p{
+    font-family: $font-josefin;
+    margin: 3px 15px;
+    font-size: 20px;
+  }
+}
+
+
+
+.Visionary {
+  grid-area: Visionary;
+  margin: 0px 10px;
+  h2 {
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
+    text-align: center;
+    background-color: $terracottapure;
+    padding: 10px;
+  }
+  p{
+    font-family: $font-josefin;
+    margin: 3px 15px;
+    font-size: 20px;
+  }
+}
+
+.Feminist {
+  grid-area: Feminist;
+  margin-right: 10px;
+  h2 {
+    font-size: 40px;
+    font-family: $font-tangerine;
+    font-weight: 700;
+    background-color: $sandpure;
+    text-align: center;
+    padding: 10px;
+  }
+  p{
+    font-family: $font-josefin;
+    margin: 5px 15px;
+    font-size: 20px;
+  }
+}
+.cite{
+  grid-area: cite;
+  p{
+    font-size: 10px;
+  }
 }
 
 footer {
   grid-area: footer;
   background-color: $Sagegreen;
-  position: relative; /* Changed to avoid sticky footer overflow issues */
+  position: relative; /* Avoid sticky footer overflow issues */
 }
