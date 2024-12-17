@@ -960,26 +960,31 @@ footer {
   position: relative; /* Avoid sticky footer overflow issues */
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
   #container {
     display: grid;
-    grid-template-areas: "nav" "shapes" "header" "about" "shapes" "Scientist" "Reformer" "Peacemaker" "Visionary" "Feminist" "class" "test" "test2" "test3" "test4" "class1" "test6" "test5" "class2" "test7" "test8" "test9" "Plane2" "Quote" "sensitive" "Characteristics" "tendencies" "cite" "footer";
-    grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
+    grid-template-areas: "nav" "shapes" "header" "about" "Scientist" "Reformer" "Peacemaker" "Visionary" "Feminist" "class" "test" "test2" "test3" "test4" "class1" "test6" "test5" "class2" "test7" "test8" "test9" "Plane2" "sensitive" "Characteristics" "tendencies" "cite" "footer";
+    grid-template-rows: auto; /* Each row automatically fits content */
     background-color: rgb(242, 242, 207);
-    overflow-x: hidden; /* Prevent horizontal scroll */
   }
   nav {
     grid-area: nav;
   }
   .shapes {
     grid-area: shapes;
-    margin: 0%;
+  }
+  .blocks {
+    grid-area: blocks;
+  }
+  .blocks img {
+    display: none;
   }
   header {
     grid-area: header;
   }
   .about {
     grid-area: about;
+    margin: 0px;
   }
   .Scientist {
     grid-area: Scientist;
@@ -996,659 +1001,50 @@ footer {
   .Feminist {
     grid-area: Feminist;
   }
+  .class {
+    grid-area: class;
+  }
+  .test {
+    grid-area: test;
+  }
+  .test2 {
+    grid-area: test2;
+  }
+  .test3 {
+    grid-area: test3;
+  }
+  .test4 {
+    grid-area: test4;
+  }
+  .class1 {
+    grid-area: class1;
+  }
+  .test6 {
+    grid-area: test6;
+  }
+  .test5 {
+    grid-area: test5;
+  }
+  .class2 {
+    grid-area: class2;
+  }
+  .test7 {
+    grid-area: test7;
+  }
+  .test8 {
+    grid-area: test8;
+  }
+  .test9 {
+    grid-area: test9;
+  }
+  .Plane2 {
+    grid-area: Plane2;
+  }
   .Quote {
     grid-area: Quote;
   }
   .Quote img {
     display: none;
-  }
-  .class {
-    grid-area: class;
-    margin-bottom: 50px;
-    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .class h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .class p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .class img {
-    width: 300px;
-    height: auto;
-  }
-  .class .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .class .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .class .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .class .flip-card-front, .class .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .class .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .class .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test {
-    grid-area: test;
-    margin: 0.5px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test img {
-    width: 300px;
-    height: auto;
-  }
-  .test .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test .flip-card-front, .test .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test2 {
-    grid-area: test2;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test2 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test2 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test2 img {
-    width: 300px;
-    height: auto;
-  }
-  .test2 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test2 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test2 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test2 .flip-card-front, .test2 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test2 .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .test2 .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test3 {
-    grid-area: test3;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test3 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test3 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test3 img {
-    width: 300px;
-    height: auto;
-  }
-  .test3 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test3 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test3 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test3 .flip-card-front, .test3 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test3 .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test3 .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .class1 {
-    grid-area: class1;
-    margin-bottom: 50px;
-    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .class1 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .class1 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .class1 img {
-    width: 300px;
-    height: auto;
-  }
-  .class1 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .class1 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .class1 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .class1 .flip-card-front, .class1 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .class1 .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .class1 .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test4 {
-    grid-area: test4;
-    margin: 0.5px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test4 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test4 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test4 img {
-    width: 300px;
-    height: auto;
-  }
-  .test4 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test4 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test4 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test4 .flip-card-front, .test4 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test4 .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test4 .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test5 {
-    grid-area: test5;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test5 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test5 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test5 img {
-    width: 300px;
-    height: auto;
-  }
-  .test5 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test5 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test5 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test5 .flip-card-front, .test5 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test5 .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .test5 .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test6 {
-    grid-area: test6;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test6 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test6 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test6 img {
-    width: 300px;
-    height: auto;
-  }
-  .test6 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test6 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test6 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test6 .flip-card-front, .test6 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test6 .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test6 .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .class2 {
-    grid-area: class2;
-    margin-bottom: 50px;
-    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .class2 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .class2 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .class2 img {
-    width: 300px;
-    height: auto;
-  }
-  .class2 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .class2 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .class2 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .class2 .flip-card-front, .class2 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .class2 .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .class2 .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test7 {
-    grid-area: test7;
-    margin: 0.5px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test7 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test7 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test7 img {
-    width: 300px;
-    height: auto;
-  }
-  .test7 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test7 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test7 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test7 .flip-card-front, .test7 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test7 .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test7 .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test8 {
-    grid-area: test8;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test8 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test8 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test8 img {
-    width: 300px;
-    height: auto;
-  }
-  .test8 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test8 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test8 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test8 .flip-card-front, .test8 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test8 .flip-card-front {
-    background-color: rgba(34, 139, 34, 0.5);
-    color: black;
-  }
-  .test8 .flip-card-back {
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .test9 {
-    grid-area: test9;
-    margin-bottom: 50px;
-    /* This container is needed to position the front and back side */
-    /* Do an horizontal flip when you move the mouse over the flip box container */
-    /* Position the front and back side */
-    /* Style the front side (fallback if image is missing) */
-    /* Style the back side */
-  }
-  .test9 h1 {
-    font-family: "Tangerine", cursive;
-    font-size: 40px;
-    color: rgb(54, 69, 79);
-  }
-  .test9 p {
-    font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
-  }
-  .test9 img {
-    width: 300px;
-    height: auto;
-  }
-  .test9 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  .test9 .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .test9 .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  .test9 .flip-card-front, .test9 .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Safari */
-    backface-visibility: hidden;
-  }
-  .test9 .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  .test9 .flip-card-back {
-    background-color: rgb(194, 178, 128);
-    color: white;
-    transform: rotateY(180deg);
-  }
-  .Plane2 {
-    grid-area: Plane2;
   }
   .sensitive {
     grid-area: sensitive;
@@ -1664,9 +1060,5 @@ footer {
   }
   .footer {
     grid-area: footer;
-  }
-  /* Shapes images styling */
-  .blocks img {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
