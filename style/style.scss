@@ -27,6 +27,7 @@ $font-tangerine: 'Tangerine', cursive;
     "Quote Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2"
     "sensitive sensitive sensitive sensitive Characteristics Characteristics Characteristics Characteristics tendencies tendencies tendencies tendencies"
     "cite cite cite cite cite cite cite cite cite cite cite cite"
+    //"aside Peiod  Peiod  Peiod  Peiod Period Period Period Period Period Period Period"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
     
   grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
@@ -1081,6 +1082,22 @@ header {
     padding: 10px;
   }
 
+}
+.Period{
+  grid-area: Period;
+  background-color: $terracotta;
+  padding: 10px;
+  margin: 10px 20px;
+  text-align: center;
+  font-family: $font-josefin;
+  font-size: 20px;
+}
+aside{
+  grid-area: aside;
+  img{
+    width: 300px;
+    height: auto;
+  }
 }
 footer {
   grid-area: footer;

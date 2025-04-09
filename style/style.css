@@ -954,6 +954,24 @@ header {
   padding: 10px;
 }
 
+.Period {
+  grid-area: Period;
+  background-color: rgba(226, 114, 91, 0.5);
+  padding: 10px;
+  margin: 10px 20px;
+  text-align: center;
+  font-family: "Josefin Slab", "Playfair Display", "Merriweather", serif;
+  font-size: 20px;
+}
+
+aside {
+  grid-area: aside;
+}
+aside img {
+  width: 300px;
+  height: auto;
+}
+
 footer {
   grid-area: footer;
   background-color: rgb(156, 175, 136);
