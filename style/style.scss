@@ -12,53 +12,93 @@ $font-cormorant: 'Cormorant SC', Georgia, 'Times New Roman', serif;
 $font-josefin: 'Josefin Slab', 'Playfair Display', 'Merriweather', serif; 
 $font-tangerine: 'Tangerine', cursive;
 
-#container {
-  display: grid;
-  grid-template-areas: 
-    "nav nav nav nav nav nav nav nav nav nav nav nav"
-    "shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes"
-    "header header header header header header header header header header header header"
-    "blocks blocks blocks blocks blocks blocks about about about about about about"
-    "Scientist Scientist Scientist Scientist Reformer Reformer Reformer Reformer Peacemaker Peacemaker Peacemaker Peacemaker"
-    "Visionary Visionary Visionary Visionary Visionary Visionary Feminist Feminist Feminist Feminist Feminist Feminist"
-    "class class class test test test test2 test2 test2 test3 test3 test3"
-    "test4 test4 test4 class1 class1 class1  test6 test6 test6 test5 test5 test5 "
-    "class2 class2 class2 test7 test7 test7 test8 test8 test8 test9 test9 test9"
-    "Quote Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2"
-    "sensitive sensitive sensitive sensitive Characteristics Characteristics Characteristics Characteristics tendencies tendencies tendencies tendencies"
-    "cite cite cite cite cite cite cite cite cite cite cite cite"
-    //"aside Peiod  Peiod  Peiod  Peiod Period Period Period Period Period Period Period"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
-    
-  grid-template-rows: auto 1fr auto; /* Adjusted for better fitting */
-  background-color: $Beige;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
+  /* === CONTAINER GRID SETUP === */
+    #container {
+      display: grid;
+      grid-template-areas: 
+        "nav nav nav nav nav nav nav nav nav nav nav nav"
+        "shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes shapes"
+        "header header header header header header header header header header header header"
+        "blocks blocks blocks blocks blocks blocks about about about about about about"
+        "Scientist Scientist Scientist Scientist Reformer Reformer Reformer Reformer Peacemaker Peacemaker Peacemaker Peacemaker"
+        "Visionary Visionary Visionary Visionary Visionary Visionary Feminist Feminist Feminist Feminist Feminist Feminist"
+        "class class class test test test test2 test2 test2 test3 test3 test3"
+        "test4 test4 test4 class1 class1 class1 test6 test6 test6 test5 test5 test5"
+        "class2 class2 class2 test7 test7 test7 test8 test8 test8 test9 test9 test9"
+        "Quote Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2 Plane2"
+        "sensitive sensitive sensitive sensitive Characteristics Characteristics Characteristics Characteristics tendencies tendencies tendencies tendencies"
+        "cite cite cite cite cite cite cite cite cite cite cite cite"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+      grid-template-rows: auto 1fr auto;
+      background-color: #f5f5dc; /* Beige fallback */
+      overflow-x: hidden;
+    }
 
-nav {
-  grid-area: nav;
-  background-color: $Sagegreen;
-  padding: 1px;
-  text-align: center;
-  position: sticky;
-  top: 0; /* Sticks the navbar to the top of the page */
-  z-index: 1000; /* Makes sure the navbar stays above other content */
-}
+    /* === NAVIGATION === */
+    nav {
+      grid-area: nav;
+      background-color: #9caf88; /* Sage green fallback */
+      padding: 30px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav li {
-  display: inline;
-  list-style-type: none;
-  margin-right: 1.5em;
-}
+    nav ul {
+      padding: 0;
+      margin: 0;
+    }
 
-nav li a {
-  color: black;
-}
+    nav li {
+      display: inline-block;
+      position: relative;
+      list-style-type: none;
+      margin-right: 1.5em;
+    }
 
-nav .active {
-  padding: 10px;
-}
+    nav li a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: black;
+      background-color: transparent;
+    }
 
+    nav .active {
+      font-weight: bold;
+    }
+
+    /* === DROPDOWN === */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $Beige;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border: 1px solid $Beige;
+      z-index: 1000;
+      min-width: 220px;
+    }
+
+    .dropdown-content li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      background-color: $Beige;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Optional: add hover effect */
+    .dropdown-content li a:hover {
+      background-color: #f0f0f0;
+    }
 header {
   grid-area: header;
   text-align: center;
@@ -67,6 +107,11 @@ header {
   padding: 0;
   margin: 0;
   font-family: $font-tangerine;
+}
+header p{
+  font-family: $font-josefin;
+  font-size: 40px;
+
 }
 
 .about {
