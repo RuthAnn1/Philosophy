@@ -38,7 +38,7 @@ $font-tangerine: 'Tangerine', cursive;
     nav {
       grid-area: nav;
       background-color: #9caf88; /* Sage green fallback */
-      padding: 30px;
+      padding: 20px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -58,7 +58,7 @@ $font-tangerine: 'Tangerine', cursive;
     }
 
     nav li a {
-      padding: 10px 15px;
+      //padding: 10px 15px;
       text-decoration: none;
       color: black;
       background-color: transparent;
